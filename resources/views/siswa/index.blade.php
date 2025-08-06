@@ -8,33 +8,39 @@
 <body>
   <h1><b>STUDENT HOMEPAGE</b></h1>
   <h2>STUDENT LIST</h2>
-  <a href="siswa/create">ADD STUDENT</a>
+  <a href="siswa/create">Create Student</a>
   <table border="1">
     <thead>
       <tr>
-        <td>NO</td>
-        <td>NAME</td>
-        <td>CLASS</td>
-        <td>NISN</td>
-        <td>ADDRESS</td>
-        <td>PHOTO</td>
-        <td>OPTION</td>
+        <td>No</td>
+        <td>Name</td>
+        <td>Class</td>
+        <td>Nisn</td>
+        <td>Address</td>
+        <td>Photo</td>
+        <td>Option</td>
       </tr>
     </thead>
     <tbody>
+      @foreach ( $siswas as $siswa )
+      
       <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>{{ $siswa->id }}</td>
+        <td>{{ $siswa->name }}</td>
+        <td>{{ $siswa->Clas->name }}</td>
+        <td>{{ $siswa->nisn }}</td>
+        <td> {{ $siswa->alamat }}</td>
+        <td>
+  <img src="{{ asset('storage/' . $siswa->photo) }}" alt="photo" width="80">
+</td>
+
         <td>
           <a href="">DELETE</a> |
-            <a href="">EDIT</a> |
-            <a href="">DETAIL</a> |
+          <a href="">EDIT</a> |
+          <a href="">DETAIL</a> |
         </td>
       </tr>
+      @endforeach
     </tbody>
   </table>
 </body>
