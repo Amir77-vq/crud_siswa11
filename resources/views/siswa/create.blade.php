@@ -33,7 +33,7 @@
             @enderror
         </div>
         <div>
-            <label for="">Nisn</label> <br>
+            <label for="">NISN</label> <br>
             <input type="text" name="nisn"><br>
         </div>
             @error('nisn')

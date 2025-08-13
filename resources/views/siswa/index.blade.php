@@ -18,7 +18,7 @@
     @endif
 
     {{-- Tabel daftar siswa --}}
-    <table border="1" cellpadding="8" cellspacing="0">
+    <table border="5" cellpadding="8" cellspacing="0">
         <thead>
             <tr>
                 <th>No</th>
@@ -42,21 +42,21 @@
                         @if($siswa->photo)
                             <img src="{{ asset('storage/' . $siswa->photo) }}" alt="Foto Siswa" width="60">
                         @else
-                            Tidak ada foto
+                            No photo
                         @endif
                     </td>
                     <td>
                         <a href="{{ route('siswa.show', $siswa->id) }}">Detail</a>
                         <a href="{{ route('siswa.edit', $siswa->id) }}">Edit</a>
                         <a href="{{ route('siswa.delete', $siswa->id) }}"
-                          onclick="return confirm('Yakin ingin menghapus siswa ini?')">
-                          Delete
+                        onclick="return confirm('Are you sure you want to delete this student?')">
+                        Delete
                         </a>
                     </td>
                 </tr>
             @empty
                 <tr>
-                    <td colspan="7">Tidak ada data siswa</td>
+                    <td colspan="7">There is no student data</td>
                 </tr>
             @endforelse
         </tbody>

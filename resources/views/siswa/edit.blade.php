@@ -37,7 +37,7 @@
         @enderror
         <div>
             <label for="">Address</label> <br>
-            <input type="text" name="alamat" value="{{$datauser->address}}"><br>
+            <input type="text" name="alamat" value="{{$datauser->alamat}}"><br>
             @error('address')
                 <small style="color:red">{{$message}}</small>
             @enderror
