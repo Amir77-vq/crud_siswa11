@@ -3,9 +3,19 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiswaController;
 
+// Halaman utama daftar siswa
+Route::get('/', [SiswaController::class, 'index'])->name('siswa.index');
 
-Route::get('/', [SiswaController::class, 'index']);
+// Halaman tambah siswa & simpan
+Route::get('/siswa/create', [SiswaController::class, 'create'])->name('siswa.create');
+Route::post('/siswa/store', [SiswaController::class, 'store'])->name('siswa.store');
 
-Route::get('/siswa/create', [SiswaController::class, 'create']);
+// Halaman detail siswa
+Route::get('/siswa/show/{id}', [SiswaController::class, 'show'])->name('siswa.show');
 
-Route::post('/siswa/store', [SiswaController::class, 'store']);
+// Halaman edit & update siswa
+Route::get('/siswa/edit/{id}', [SiswaController::class, 'edit'])->name('siswa.edit');
+Route::post('/siswa/update/{id}', [SiswaController::class, 'update'])->name('siswa.update');
+
+// Hapus siswa
+Route::get('/siswa/delete/{id}', [SiswaController::class, 'destroy'])->name('siswa.delete');
