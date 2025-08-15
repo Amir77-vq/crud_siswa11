@@ -11,6 +11,7 @@
 
     {{-- Tombol tambah siswa --}}
     <a href="{{ route('siswa.create') }}">Create Student</a>
+    <a href="{{ route('clas.index') }}">Create class</a>
 
     {{-- Pesan sukses --}}
     @if(session('success'))
@@ -18,7 +19,7 @@
     @endif
 
     {{-- Tabel daftar siswa --}}
-    <table border="5" cellpadding="8" cellspacing="0">
+    <table border="7" cellpadding="8" cellspacing="0">
         <thead>
             <tr>
                 <th>No</th>

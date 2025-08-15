@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>STUDENT EDIT</title>
+    <title>Document</title>
 </head>
 <body>
     <h1>EDIT DATA STUDENT</h1>
@@ -15,7 +15,7 @@
         @csrf
         <div>
             <label for="">Class</label><br>
-            <select name="clas_id">
+            <select name="class_id">
                 @foreach ($clases as $clas)
                     <option {{$clas->id == $datauser->clas_id ? 'selected' : ''}} value="{{$clas->id}}">{{$clas->name}}</option>
                 @endforeach
