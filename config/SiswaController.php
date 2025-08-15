@@ -96,7 +96,6 @@ class SiswaController extends Controller
     public function update(Request $request, $id){
         // Validasi
         $request->validate([
-            'clas_id' => 'required|exists:' . (new \App\Models\Clas)->getTable() . ',id',
             'name'          => 'required',
             'nisn'          => 'required',
             'alamat'        => 'required',
@@ -109,7 +108,7 @@ class SiswaController extends Controller
 
         // Siapkan data update
         $datasiswa_update = [
-            'clas_id'      => $request->clas_id,
+            'clas_id'      => $request->class_id,
             'name'         => $request->name,
             'nisn'         => $request->nisn,
             'alamat'       => $request->alamat,

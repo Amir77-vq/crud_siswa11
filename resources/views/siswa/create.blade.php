@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>ADD STUDENT</title>
 </head>
 <body>
     <h1>ADD STUDENT PAGE</h1>
@@ -13,7 +13,7 @@
     <form action="/siswa/store" method="POST" enctype="multipart/form-data">
         @csrf
         <div>
-            <label for="">clas</label>
+            <label for="">Class</label>
             <br>
             <select name="clas_id">
             @foreach ($clases as $clas)
@@ -33,7 +33,7 @@
             @enderror
         </div>
         <div>
-            <label for="">Nisn</label> <br>
+            <label for="">NISN</label> <br>
             <input type="text" name="nisn"><br>
         </div>
             @error('nisn')
@@ -41,8 +41,8 @@
             @enderror
         <div>
             <label for="">Address</label> <br>
-            <input type="text" name="address"><br>
-            @error('address')
+            <input type="text" name="alamat"><br>
+            @error('alamat')
                 <small style="color:red">{{$message}}</small>
             @enderror
         </div>
@@ -68,7 +68,7 @@
             @enderror
         </div>
         <div>
-            <label for="">Foto</label> <br>
+            <label for="">Photo</label> <br>
             <input type="file" name="foto">
         </div>
 
